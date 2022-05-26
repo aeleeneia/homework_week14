@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="week14-calc.css">
+</head>
+
+<body>
+    <div class="container-new">
+        <div>Число 1</div>
+        <input type="number" id="num-1">
+        <div class="operators-btns">
+            <button id="plus" onclick="">
+                <img class="img-new" src="https://img.icons8.com/emoji/452/plus-emoji.png" alt="plus">
+            </button>
+            <button id="minus" onclick="'">
+                <img class="img-new" src="https://img.icons8.com/emoji/452/minus-emoji.png" alt="minus">
+            </button>
+            <button id="divide" onclick="operator='/'">
+                <img class="img-new" src="https://img.icons8.com/emoji/452/divide-emoji.png" alt="divide">
+            </button>
+            <button id="multiply" onclick="operator='*'">
+                <img class="img-new" src="https://img.icons8.com/emoji/344/multiply-emoji.png" alt="multiply">
+            </button>
+        </div>
+        <div>Число 2</div>
+        <input type="number" id="num-2"><br>
+        <div>Результат</div>
+        <p id="result"></p>
+    </div>
+
+
+    <script>
+        var result;
+        var operator;
+        var num1New = Number(document.getElementById("num-1"));
+        var num2New = Number(document.getElementById("num-2"));
+
+        function calc(num1New, num2New, operator) {
+            if (operator == +)
+                return num1New + num2New;
+            else (oeprator == -)
+            return num1New - num2New;
+        }
+
+    </script>
+</body>
+
+</html>
