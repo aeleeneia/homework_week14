@@ -18,35 +18,33 @@
             <button id="plus" onclick="">
                 <img class="img-new" src="https://img.icons8.com/emoji/452/plus-emoji.png" alt="plus">
             </button>
-            <button id="minus" onclick="'">
+            <button id="minus" onclick="">
                 <img class="img-new" src="https://img.icons8.com/emoji/452/minus-emoji.png" alt="minus">
             </button>
-            <button id="divide" onclick="operator='/'">
+            <button id="divide" onclick="">
                 <img class="img-new" src="https://img.icons8.com/emoji/452/divide-emoji.png" alt="divide">
             </button>
-            <button id="multiply" onclick="operator='*'">
+            <button id="multiply" onclick="">
                 <img class="img-new" src="https://img.icons8.com/emoji/344/multiply-emoji.png" alt="multiply">
             </button>
         </div>
         <div>Число 2</div>
         <input type="number" id="num-2"><br>
-        <div>Результат</div>
         <p id="result"></p>
+        <div>
+            <button onclick="getResultPlus()">Результат</button>
+        </div>
     </div>
 
 
     <script>
-        var result;
-        var operator;
-        var num1New = Number(document.getElementById("num-1"));
-        var num2New = Number(document.getElementById("num-2"));
+        let num1Input = document.getElementById('num-1');
+        let num2Input = document.getElementById('num-2');
 
-        function calc(num1New, num2New, operator) {
-            if (operator == +)
-                return num1New + num2New;
-            else (oeprator == -)
-            return num1New - num2New;
-        }
+        function getResultPlus(num1Input, num2Input) {
+            return num1Input + num2Input;
+            console.log(getResultPlus);
+        };
 
     </script>
 </body>
