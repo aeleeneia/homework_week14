@@ -1,0 +1,21 @@
+.gallery-container {
+    display: flex;
+    justify-content: center;
+}
+
+.arrow-left {
+    transform: scaleX(-1);
+}
+
+.image-main {
+    width: 45%;
+}
+
+.arrow-left, .arrow-right {
+    width: 60px;
+}
+
+.button {
+    background: none;
+    border: none;
+}

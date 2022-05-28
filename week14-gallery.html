@@ -6,11 +6,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gallery</title>
+    <link rel="stylesheet" href="week14-gallery.css">
 </head>
 
 <body>
-
+    <div class="gallery-container">
+        <button class="button" type="button" onclick="nextImg()">
+            <img class="arrow-left" src="https://cdn-icons-png.flaticon.com/512/467/467282.png" alt="previous-icon">
+        </button>
+        <div class="image-container">
+            <img class="image-main" id="imageMain"
+                src="https://i.etsystatic.com/23032371/r/il/39127b/3163819403/il_fullxfull.3163819403_6c0h.jpg" alt="">
+        </div>
+        <button class="button" type="button" onclick="previousImg()">
+            <img class="arrow-right" src="https://cdn-icons-png.flaticon.com/512/467/467282.png" alt="next-icon">
+        </button>
+    </div>
+    <script>
+        function nextImg() {
+            let mainImage = document.getElementById('imageMain');
+            mainImage.src = "https://portraitry.com/wp-content/uploads/2021/02/3.jpg";
+        }
+        function previousImg() {
+            let mainImage = document.getElementById('imageMain');
+            mainImage.src = "https://i.etsystatic.com/23032371/r/il/d6aa47/2641040212/il_1588xN.2641040212_s7t2.jpg";
+        }
+    </script>
 </body>
 
 </html>

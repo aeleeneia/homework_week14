@@ -14,8 +14,10 @@
     <div class="container-new">
         <div>Число 1</div>
         <input type="number" id="num-1">
+        <div>Число 2</div>
+        <input type="number" id="num-2"><br>
         <div class="operators-btns">
-            <button id="plus" onclick="">
+            <button id="plus" onclick="getResultPlus()">
                 <img class="img-new" src="https://img.icons8.com/emoji/452/plus-emoji.png" alt="plus">
             </button>
             <button id="minus" onclick="">
@@ -28,23 +30,22 @@
                 <img class="img-new" src="https://img.icons8.com/emoji/344/multiply-emoji.png" alt="multiply">
             </button>
         </div>
-        <div>Число 2</div>
-        <input type="number" id="num-2"><br>
-        <p id="result"></p>
-        <div>
-            <button onclick="getResultPlus()">Результат</button>
+        <div id="result">
         </div>
     </div>
 
-
     <script>
-        let num1Input = document.getElementById('num-1');
-        let num2Input = document.getElementById('num-2');
+        let input1 = document.getElementById('num-1').value;
+        let input2 = document.getElementById('num-2').value;
+        let result = document.getElementById('result').innerHTML
 
-        function getResultPlus(num1Input, num2Input) {
-            return num1Input + num2Input;
-            console.log(getResultPlus);
+        function getResultPlus(input1, input2) {
+            return (input1 + input2);
+            alert(getResultPlus);
         };
+
+
+        // document.getElementById("result").innerHTML = document.getElementById("input1").value - document.getElementById("input2").value
 
     </script>
 </body>
