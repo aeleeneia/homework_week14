@@ -35,19 +35,20 @@
     </div>
 
     <script>
-        let input1 = document.getElementById('num-1').value;
-        let input2 = document.getElementById('num-2').value;
+        let input1 = document.getElementById('num-1').value
+        let input2 = document.getElementById('num-2').value
         let result = document.getElementById('result').innerHTML
 
         function getResultPlus(input1, input2) {
-            return (input1 + input2);
-            alert(getResultPlus);
+            return (document.getElementById('num-1').value + document.getElementById('num-2').value)
+            console.log(getResultPlus.value);
         };
 
-
-        // document.getElementById("result").innerHTML = document.getElementById("input1").value - document.getElementById("input2").value
-
+        function getResultMinus(input1, input2) {
+        }
     </script>
 </body>
 
 </html>
+
+<!-- document.getElementById("result").innerHTML = document.getElementById("input1").value - document.getElementById("input2").value -->
