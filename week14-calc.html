@@ -6,49 +6,75 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculator_week14</title>
     <link rel="stylesheet" href="week14-calc.css">
 </head>
 
 <body>
-    <div class="container-new">
-        <div>Число 1</div>
-        <input type="number" id="num-1">
-        <div>Число 2</div>
-        <input type="number" id="num-2"><br>
-        <div class="operators-btns">
-            <button id="plus" onclick="getResultPlus()">
-                <img class="img-new" src="https://img.icons8.com/emoji/452/plus-emoji.png" alt="plus">
+    <div class="calculator">
+        <h1>Калькулятор</h1>
+        <div class="calculator__input-group">
+            <div>
+                <label for="input-num-one">Введите первое число:</label>
+                <input type="number" id="input-num-one" class="calculator__input-num">
+            </div>
+        </div>
+        <div class="calculator__input-group">
+            <div>
+                <label for="input-num-two">Введите второе число:</label>
+                <input type="number" id="input-num-two" class="calculator__input-num">
+            </div>
+        </div>
+        <div class="calculator__operators">
+            <button class="calculator__button" id="button-plus" onclick="calcSum(numOne, numTwo)">
+                <img src="https://img.icons8.com/emoji/48/000000/plus-emoji.png" />
             </button>
-            <button id="minus" onclick="">
-                <img class="img-new" src="https://img.icons8.com/emoji/452/minus-emoji.png" alt="minus">
+            <button class="calculator__button" id="button-minus" onclick="calcMinus(numOne, numTwo)">
+                <img src="https://img.icons8.com/emoji/48/000000/minus-emoji.png" />
             </button>
-            <button id="divide" onclick="">
-                <img class="img-new" src="https://img.icons8.com/emoji/452/divide-emoji.png" alt="divide">
+            <button class="calculator__button" id="button-multiply" onclick="calcMultiply(numOne, numTwo)">
+                <img src="https://img.icons8.com/emoji/48/000000/multiply-emoji.png" />
             </button>
-            <button id="multiply" onclick="">
-                <img class="img-new" src="https://img.icons8.com/emoji/344/multiply-emoji.png" alt="multiply">
+            <button class="calculator__button" id="button-divide" onclick="calcDivision(numOne, numTwo)">
+                <img src="https://img.icons8.com/emoji/48/000000/divide-emoji.png" />
             </button>
         </div>
-        <div id="result">
+        <div class="result">
+            <span>Результат: </span>
+            <div class="result__calc">0</div>
         </div>
     </div>
-
     <script>
-        let input1 = document.getElementById('num-1').value
-        let input2 = document.getElementById('num-2').value
-        let result = document.getElementById('result').innerHTML
+        let numOne = document.querySelector('#input-num-one');
+        let numTwo = document.querySelector('#input-num-two');
 
-        function getResultPlus(input1, input2) {
-            return (document.getElementById('num-1').value + document.getElementById('num-2').value)
-            console.log(getResultPlus.value);
-        };
+        const buttonPlus = document.querySelector('#button-plus');
+        const buttonMinus = document.querySelector('#button-minus');
+        const buttonMultiply = document.querySelector('#button-multiply');
+        const buttonDivide = document.querySelector('#button-divide');
+        const calcResult = document.querySelector('.result__calc');
 
-        function getResultMinus(input1, input2) {
+        function calcSum(numOne, numTwo) {
+            const result = +numOne.value + +numTwo.value;
+            calcResult.innerHTML = result;
         }
+
+        function calcMinus(numOne, numTwo) {
+            const result = +numOne.value - +numTwo.value;
+            calcResult.innerHTML = result;
+        }
+
+        function calcMultiply(numOne, numTwo) {
+            const result = +numOne.value * +numTwo.value;
+            calcResult.innerHTML = result;
+        }
+
+        function calcDivision(numOne, numTwo) {
+            const result = +numOne.value / +numTwo.value;
+            calcResult.innerHTML = result;
+        }
+
     </script>
 </body>
 
 </html>
-
-<!-- document.getElementById("result").innerHTML = document.getElementById("input1").value - document.getElementById("input2").value -->
